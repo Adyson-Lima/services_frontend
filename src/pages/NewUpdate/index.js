@@ -30,6 +30,8 @@ export default function NewUpdate(){
             placeholder="###"></input>
           </div>
 
+          <button data-testid="btnenviar" type="submit" className="btn btn-primary">Enviar</button>
+
         </form>
 
       </div>
