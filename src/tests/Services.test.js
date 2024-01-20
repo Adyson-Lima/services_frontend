@@ -20,4 +20,8 @@ describe('Testes da tela Services', () => {
     expect(screen.getByTestId('mylink')).toBeInTheDocument();
   });
 
+  it('Existe tabela em Services?', () => {
+    expect(screen.getByTestId('mytable')).toBeInTheDocument();
+  });
+
 });
