@@ -22,6 +22,16 @@ export default function Services(){
     }
   }
 
+  // delete, exclui um registro na api
+  async function deleteService(id){
+    try {
+      await api.delete(`api/v1/services/${id}`,{});
+      setServices(my_services.filter(service => service.id !== id));
+    } catch (error) {
+      alert('erro ao excluir');      
+    }
+  }
+
   return(
     <div data-testid="mycard" className="card border-primary" style={{marginTop: '20px'}} >
       <div className="card-header bg-primary" style={{color: '#fff'}}>
@@ -54,7 +64,8 @@ export default function Services(){
                     onClick={() => updateService(service.id)}>Editar</button>
 
                     <button data-testid="mybtn2" type="button"
-                    className="btn btn-outline-danger" style={{margin: '2px'}}>Excluir</button>
+                    className="btn btn-outline-danger" style={{margin: '2px'}}
+                    onClick={() => deleteService(service.id)}>Excluir</button>
 
                   </td>
               </tr>
