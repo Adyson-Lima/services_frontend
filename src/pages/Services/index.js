@@ -30,6 +30,9 @@ export default function Services(){
                 <td></td>
                 <td>
 
+                  <button data-testid="mybtn1" type="button"
+                  className="btn btn-outline-info" style={{margin: '2px'}}>Editar</button>
+
                 </td>
             </tr>
           </tbody>
